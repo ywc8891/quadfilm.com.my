@@ -1,0 +1,440 @@
+body {
+    position: relative
+}
+
+.sidemenu-nav-toggler {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5em;
+    height: 5em;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d1d;
+    box-shadow: 3px 3px 7px rgb(40 40 40/20%);
+    z-index: 22
+}
+
+.menu-animate {
+    cursor: pointer;
+    display: inline-block
+}
+
+.menu-bar {
+    display: block;
+    height: 5px;
+    width: 40px;
+    background: #00edf6;
+    margin: 10px auto
+}
+
+.menu-animate {
+    width: auto;
+    margin: 0 auto;
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease
+}
+
+.menu-animate.active .menu-bar {
+    background-color: #e4c065
+}
+
+.middle {
+    margin: 0 auto
+}
+
+.menu-bar {
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease
+}
+
+.menu-animate.active .top {
+    -webkit-transform: translateY(15px) rotateZ(45deg);
+    -moz-transform: translateY(15px) rotateZ(45deg);
+    -ms-transform: translateY(15px) rotateZ(45deg);
+    -o-transform: translateY(15px) rotateZ(45deg);
+    transform: translateY(15px) rotateZ(45deg)
+}
+
+.menu-animate.active .bottom {
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);
+    -moz-transform: translateY(-15px) rotateZ(-45deg);
+    -ms-transform: translateY(-15px) rotateZ(-45deg);
+    -o-transform: translateY(-15px) rotateZ(-45deg);
+    transform: translateY(-15px) rotateZ(-45deg)
+}
+
+.menu-animate.active .middle {
+    width: 0
+}
+
+.hidden-sidebar.open-sidebar {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.hidden-sidebar {
+    position: absolute;
+    z-index: 23;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+    width: 100%;
+    height: 100%
+}
+
+.hidden-sidebar.open-sidebar {
+    visibility: visible
+}
+
+.desktopmenu-modal-overlay {
+    position: fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: visibility 0s linear .3s,opacity .3s
+}
+
+#cursor-follower {
+    position: absolute;
+    background-color: #00edf6;
+    width: 35px;
+    height: 36px;
+    right: 0;
+    top: 0;
+    cursor: pointer
+}
+
+#cursor-follower:before {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 2px;
+    background: #fff;
+    left: 50%;
+    top: 6px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    display: inline-block
+}
+
+#cursor-follower:after {
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 2px;
+    background: #fff;
+    right: 46%;
+    top: 6px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.open-sidebar .desktopmenu-modal-overlay {
+    visibility: visible;
+    transition-delay: 0s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center
+}
+
+.open-sidebar .desktopmenu-modal-overlay #cursor-follower {
+    visibility: visible;
+    transform: translate(-50%,-50%)
+}
+
+.desktopmenu-modal-wrapper {
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    height: 100%
+}
+
+.desktopmenu-modal-transition {
+    transition: all .3s .12s;
+    transform: translateX(-10%);
+    opacity: 0
+}
+
+.open-sidebar .desktopmenu-modal-transition {
+    transform: translateX(0);
+    opacity: 1
+}
+
+.desktopmenu-modal-conten {
+    position: relative;
+    height: 100%
+}
+
+.desktopmenu-modal-conten .sidemenu-container {
+    overflow: hidden;
+    overflow-y: scroll
+}
+
+.desktopmenu-modal-conten .sidemenu-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    border-radius: 10px;
+    background-color: #fff
+}
+
+.desktopmenu-modal-conten .sidemenu-container::-webkit-scrollbar {
+    width: 5px
+}
+
+.desktopmenu-modal-conten .sidemenu-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgb(0 0 0/35%);
+    background-color: #00edf6;
+}
+
+.desktopmenu-modal-conten .sidemenu-container .side-inner {
+    width: 280px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between
+}
+
+.desktopmenu-modal-conten .sidemenu-container .Side-Logo {
+    padding: 65px 20px 20px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .Side-Logo img.logo-image {
+    width: 135px;
+}
+
+.desktopmenu-modal-conten .sidemenu-container .Side-Logo img.logo-text {
+    width: 164px;
+    margin: 20px auto 0
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area {
+    padding: 20px 0
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list {
+    list-style: none;
+    padding: 1rem 2rem
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item {
+    text-align: center;
+    position: relative
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item a {
+    position: relative;
+    display: block;
+    font-size: 17px;
+    line-height: 21px;
+    color: #cfcfcf;
+    transition: .2s
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item:not(:last-child) {
+    margin-bottom: 20px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item a i {
+    color: #fff;
+    position: absolute;
+    right: 15px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item a:hover i,.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item.dt-hover a i,.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item.active a i,.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item a:hover,.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item.dt-hover a,.desktopmenu-modal-conten .sidemenu-container .menu-area .menu-list .menu-item.active a {
+    color: #00edf6;
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .google {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .google a {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #e0e1e1;
+    background: #fff;
+    padding: 10px 0;
+    width: 100%;
+    align-items: center;
+    border-radius: 50px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .google a .icon {
+    margin-right: 5px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .google a .text {
+    letter-spacing: -1px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .waze {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .waze a {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #e0e1e1;
+    background: #fff;
+    padding: 10px 0;
+    align-items: center;
+    border-radius: 50px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .waze a .icon {
+    margin-right: 10px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .waze a .text {
+    letter-spacing: -1px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .whatsapp {
+    display: block;
+    width: 100%
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .whatsapp a {
+    color: #000;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    padding: 10px 0;
+    align-items: center;
+    border-radius: 50px;
+    background: #25d366;
+    background: -moz-linear-gradient(45deg,rgba(37,211,102,1) 0%,rgba(89,207,99,1) 100%);
+    background: -webkit-linear-gradient(45deg,rgba(37,211,102,1) 0%,rgba(89,207,99,1) 100%);
+    background: linear-gradient(45deg,rgba(37,211,102,1) 0%,rgba(89,207,99,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#25d366",endColorstr="#59cf63",GradientType=1)
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .whatsapp a .icon {
+    margin-right: 10px;
+    color: #fff
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .whatsapp a .icon i {
+    font-size: 20px;
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .whatsapp a .text {
+    color: #fff;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location a .icon img {
+    display: block;
+    width: auto;
+    height: 24px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .google a:hover {
+    border: 1px solid #174ea6;
+    background: #174ea6
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .google a:hover .text {
+    color: #fff
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .waze a:hover {
+    border: 1px solid #3cf;
+    background: #3cf
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-location .waze a:hover .text {
+    color: #fff
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-address {
+    padding: 20px
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-address .shop {
+    color: #000
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-social {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-social a {
+    display: flex;
+    align-content: center;
+    align-items: center
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-social a i {
+    text-shadow: none;
+    color: #184896;
+    text-align: center;
+    font-size: 36px;
+    display: inline-flex;
+    box-sizing: border-box;
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 3px 10px;
+    margin: 0 13px 0 0;
+    border-radius: 50%
+}
+
+.desktopmenu-modal-conten .sidemenu-container .menu-social a span {
+    color: #fff;
+    font-size: 19px;
+    line-height: 21px;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
+}
+
+.bg-white {
+    background-color: #101010 !important;
+}
+
+@media(max-width: 500px) {
+    .sidemenu-nav-toggler,.hidden-sidebar {
+        display:none
+    }
+}

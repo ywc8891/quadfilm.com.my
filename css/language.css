@@ -1,0 +1,185 @@
+body {
+    position: relative;
+}
+
+.FloatNational {
+    position: absolute;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.FloatNational .icon {
+    position: relative;
+    display: inline-block;
+    right: 30px;
+    bottom: 30px;
+    padding: 10px;
+    background: rgb(37 90 255 / 90%);
+    border-radius: 50px;
+    z-index: 15;
+    box-shadow: 0px 1px 8px #0000001f;
+}
+
+.FloatNational .icon svg {
+    width: 30px;
+    height: 30px;
+    display: block;
+    fill: white;
+}
+
+.FloatNational .choose {
+    width: 165px;
+    padding: 8px 8px;
+    border-radius: 16px;
+    background: white;
+    box-shadow: 0px 0px 4px #eaeaea99;
+}
+
+.FloatNational .choose .list {
+    display: grid;
+    grid-gap: 0px;
+}
+
+.FloatNational .choose .list a {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 12px;
+    border-radius: 4px;
+    position: relative;
+}
+
+.FloatNational .choose .list a:not(:last-child):after {
+    position: absolute;
+    content: '';
+    width: 86%;
+    height: 1px;
+    border-bottom: 1px solid #e5e5e5;
+    bottom: 0px;
+    left: 7%;
+}
+
+.FloatNational .choose .list a.active,
+.FloatNational .choose .list a:hover {
+    background: #eaeef7;
+    border-radius: 7px;
+}
+
+.FloatNational .choose .list a.active {
+    pointer-events: none;
+}
+
+.FloatNational .choose .list a .text {
+    width: 70%;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #202133;
+}
+
+.FloatNational .choose .list a:nth-child(2) .text {
+    font-weight: 500;
+}
+
+/* 1. Ensure this sits above everything when visible */
+.modal-down {
+    position: absolute;
+    z-index: 10;
+    /* 1 */
+    right: 30px;
+    bottom: 30px;
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.modal-down.is-visible {
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsl(0deg 0% 0% / 75%);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 0.3s, opacity 0.3s;
+}
+
+.modal-down.is-visible .modal-overlay {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.modal-wrapper {
+    position: absolute;
+    z-index: 20;
+    right: 60px;
+    bottom: 65px;
+    /* width: 13em; */
+}
+
+.modal-transition {
+    transition: all 0.3s 0.12s;
+    transform: translateY(-10%);
+    opacity: 0;
+}
+
+.modal-down.is-visible .modal-transition {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-conten {
+    padding: 1em;
+}
+
+.modal-conten>*:first-child {
+    margin-top: 0;
+}
+
+.modal-conten>*:last-child {
+    margin-bottom: 0;
+}
+
+@media(max-width: 500px) {
+    .FloatNational {
+        right: 15px;
+        bottom: 5px;
+        width: 40px;
+        height: 40px;
+        display: none;
+    }
+
+    .FloatNational .icon {
+        right: -1px;
+        bottom: 12px;
+        z-index: 12;
+    }
+
+    .FloatNational .icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .modal-down {
+        right: -3px;
+        bottom: 12px;
+    }
+
+    .modal-wrapper {
+        position: absolute;
+        z-index: 20;
+        right: 35px;
+        bottom: 35px;
+        width: 12.3em;
+    }
+}
