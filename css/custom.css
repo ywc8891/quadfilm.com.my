@@ -100,7 +100,7 @@
 
 
 .txt_brand {
-    color: #00EDF6;
+    color: #f6d72e;
 }
 
 .txt_brand_link {
@@ -171,6 +171,8 @@
 #HeroSection .container {
     position: relative;
     z-index: 2;
+    color: white;
+    text-align: center;
 }
 
 #HeroSection .underline {
@@ -178,6 +180,17 @@
     bottom: -12px;
     left: 50%;
     transform: translate(-50%, 0%);
+}
+
+#HeroSection .hero-color {
+	color: #FFC110;
+    font-weight: 900;
+}
+
+#HeroSection u.hero-wrong {
+	text-decoration-line: underline;
+	text-decoration-color: #c81b1b;
+	text-decoration-thickness: 5px;
 }
 
 #HeroSection .lineThree {
@@ -418,6 +431,10 @@
 
 .txt_lightblue {
     color: #e8eef6;
+}
+
+.txt_grey_indrak {
+	color: #9fa4b9;
 }
 
 @media(max-width: 500px) {
@@ -1388,7 +1405,7 @@ ol {
 }
 
 .quadp10x .left {
-    width: 34%;
+    width: 32%;
 }
 
 .quadp10x .left img {}

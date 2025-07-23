@@ -24,7 +24,7 @@ body {
     display: block;
     height: 5px;
     width: 40px;
-    background: #00edf6;
+    background: #FFC110;
     margin: 10px auto
 }
 
@@ -42,7 +42,7 @@ body {
 }
 
 .menu-animate.active .menu-bar {
-    background-color: #e4c065
+    background-color: #00edf6
 }
 
 .middle {
@@ -110,7 +110,7 @@ body {
 
 #cursor-follower {
     position: absolute;
-    background-color: #00edf6;
+    background-color: #FFC110;
     width: 35px;
     height: 36px;
     right: 0;
