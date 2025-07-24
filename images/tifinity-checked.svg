@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 26" width="25" height="26">
+	<title>tifinity-checked</title>
+	<style>
+		.s0 { fill: #f5d62e } 
+		.s1 { fill: #000000 } 
+		.s2 { fill: #4a5c2e } 
+	</style>
+	<g id="Background">
+		<path id="Path 0" class="s0" d="m0 8l5-6 5-2h5l5 2 5 7v8l-5 7-5 2h-5l-5-2-5-6z"/>
+		<path id="Path 1" class="s1" d="m11 13l6-6 3 1v3l-8 8h-3l-5-6 1-2h3l2 2 1 1z"/>
+		<path id="Path 2" class="s2" d="m10 13h1v1h-1z"/>
+	</g>
+</svg>
