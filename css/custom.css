@@ -352,7 +352,7 @@
     }
 
     #LocationContact {
-        padding: 80px 0px;
+        padding: 80px 0 0 0;
     }
 }
 
@@ -1765,7 +1765,7 @@ ol {
     background: url(../images/bg-CTA.jpg);
     border-radius: 15px;
     box-sizing: border-box;
-    margin: 75px auto 0px;
+    margin: 25px auto 0px;
 }
 
 .CTA .cover {
@@ -2118,8 +2118,12 @@ ol {
 
 #ExpertEV {
     position: relative;
-    padding: 100px 0px;
+    padding: 100px px;
     background: radial-gradient(78.29% 56.64% at 53.3% 28.92%, #FFFFFF 1.16%, #FFFFFF 21.45%, #FFFFFF 68.24%, #E8E8E8 98.1%);
+}
+
+#ExpertEV div.container {
+    padding-bottom: 50px;
 }
 
 #ExpertEV .floatLeft {
@@ -2397,12 +2401,12 @@ span.youtube_icon img {
 /* branchLocation */
 .branchLocation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     
 }
 
 .branchLocation .list {
-    width: 23.5%;
+    width: 50%;
     color: white;
     text-align: left;
 }
