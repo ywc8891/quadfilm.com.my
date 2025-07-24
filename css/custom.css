@@ -183,14 +183,14 @@
 }
 
 #HeroSection .hero-color {
-	color: #FFC110;
+    color: #FFC110;
     font-weight: 900;
 }
 
 #HeroSection u.hero-wrong {
-	text-decoration-line: underline;
-	text-decoration-color: #c81b1b;
-	text-decoration-thickness: 5px;
+    text-decoration-line: underline;
+    text-decoration-color: #c81b1b;
+    text-decoration-thickness: 5px;
 }
 
 #HeroSection .lineThree {
@@ -288,13 +288,21 @@
 }
 
 #StickyCta .whatsapp .inner {
-	display: flex;
-	justify-content: space-evenly;
-	font-size: 1.5rem;
-	font-weight: 600;
-	padding: 0.5rem 0.5rem;
-	color: white;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 0.5rem;
+    color: white;
     background-color: #25d366;
+    gap: 1rem;
+
+}
+
+@media screen and (min-width: 700px) {
+    #StickyCta {
+        display: none;
+    }
 }
 
 [data-title*=Upage] {
@@ -444,7 +452,7 @@
 }
 
 .txt_grey_indrak {
-	color: #9fa4b9;
+    color: #9fa4b9;
 }
 
 @media(max-width: 500px) {
@@ -1649,7 +1657,7 @@ ol {
     padding: 18px 50px;
     border-radius: 30px 0px 30px 0px;
     box-sizing: border-box;
-	background: linear-gradient(92.07deg, #FFB433 1.16%, #BF7901 99.28%);
+    background: linear-gradient(92.07deg, #FFB433 1.16%, #BF7901 99.28%);
 }
 
 .HybridCoating .list.right {
@@ -2412,7 +2420,7 @@ span.youtube_icon img {
 .branchLocation {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .branchLocation .list {
@@ -2422,8 +2430,11 @@ span.youtube_icon img {
 }
 
 .branchLocation .list:nth-child(1) {}
+
 .branchLocation .list:nth-child(2) {}
+
 .branchLocation .list:nth-child(3) {}
+
 .branchLocation .list:nth-child(4) {}
 
 .branchLocation .list:not(:last-child) {
